@@ -1,0 +1,30 @@
+{
+  "name": "flacar-pneus",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8",
+    "autoprefixer": "^10",
+    "lucide-react": "latest",
+    "framer-motion": "latest",
+    "papaparse": "^5.5.3",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/node": "latest",
+    "@types/papaparse": "latest",
+    "vitest": "latest"
+  }
+}

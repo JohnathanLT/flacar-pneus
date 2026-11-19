@@ -1,0 +1,1 @@
+export default {content:['./src/**/*.{ts,tsx}'],theme:{extend:{colors:{flacar:'#E31E24',vermelhoEscuro:'#B3151A',grafite:'#333438',profundo:'#1F2023',claro:'#F4F4F5',medio:'#8A8B90',whatsapp:'#1FA855'}}},plugins:[]};

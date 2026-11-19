@@ -1,0 +1,6 @@
+import type {Metadata} from 'next';
+import {site} from '@/config/site';
+import {Shell} from '@/components/catalogo-app';
+import './globals.css';
+export const metadata:Metadata={metadataBase:new URL(site.url),title:{default:`Flacar Pneus | Pneus, alinhamento e balanceamento${site.endereco.cidade?' em '+site.endereco.cidade:''}`,template:'%s | Flacar Pneus'},description:'Encontre pneus pela medida para carros, vans e caminhões. Consulte preços e disponibilidade com a Flávia pelo WhatsApp. Alinhamento, balanceamento e mecânica.',openGraph:{title:'Flacar Pneus — Seu caminho começa bem',description:'Encontre o pneu certo e consulte pelo WhatsApp.',locale:'pt_BR',type:'website',images:['/loja.webp']}};
+export default function Layout({children}:{children:React.ReactNode}){const ld={'@context':'https://schema.org','@type':'TireShop',name:site.nome,telephone:'+'+site.whatsapp,url:site.url,image:site.url+'/loja.webp',...(site.endereco.rua?{address:{'@type':'PostalAddress',streetAddress:site.endereco.rua,addressLocality:site.endereco.cidade,addressRegion:site.endereco.uf,postalCode:site.endereco.cep,addressCountry:'BR'}}:{})};return <html lang="pt-BR"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(ld).replace(/</g,'\\u003c')}}/><Shell>{children}</Shell></body></html>}
